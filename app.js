@@ -32,6 +32,6 @@ app.get("/reloadData", async (req, res) => {
   }
 });
 
-app.listen(5005, () => {
-  console.log("API listening on port 5005!");
+app.listen(5000, () => {
+  console.log("API listening on port 5000!");
 });

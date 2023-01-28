@@ -1,12 +1,13 @@
 const request = require("request");
 const { connection } = require("./db");
+require("dotenv").config({path:"./.env"})
 
 const fetchdata = () => {
   const options = {
     url: "https://websitetechdom.atlassian.net/rest/api/2/search?jql=project=webtechdom",
     auth: {
-      user: "jaiprakash18@navgurukul.org",
-      pass: "ncnRzs11HWypgeNBYs7J2C44",
+      user: process.env['TOKEN_USERNAME'],
+      pass: process.env['TOKEN_JIRA'],
     },
   };
 
